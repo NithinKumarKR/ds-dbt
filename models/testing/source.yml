@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: cello
+    schema: nivea
+
+    tables:
+      - name: kit_flat
+

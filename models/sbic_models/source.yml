@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: nithin
+    schema: nivea
+
+    tables:
+      - name: pan_information
+
+      - name: mobile_numbers
+
+      - name: email_addresses
+
+      - name: aadhar_information
+
+      - name: bank_account_information
+
+      - name: bureau_mis
+
+      - name: _airbyte_raw_tickets
+
+      - name: stg_tickets_formdoc
+      
+<<<<<<< Updated upstream
+      - name: new_formdoc_table
+=======
+      - name: new_formdoc_table
+      - name: weekday
+
+>>>>>>> Stashed changes

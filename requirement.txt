@@ -1,0 +1,12 @@
+
+db-dtypes==1.2.0
+dbt-bigquery==1.7.7
+dbt-core==1.7.13
+dbt-extractor==0.5.1
+dbt-postgres==1.7.13
+dbt-semantic-interfaces==0.4.4
+numpy==1.26.4
+packaging==24.0
+pandas==2.2.2
+
+

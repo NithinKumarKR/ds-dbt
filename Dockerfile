@@ -30,4 +30,3 @@ COPY . /usr/app/
 
 # Specify the command to run the application when the container starts
 CMD ["dbt", "--version"]
->>>>>>> Stashed changes

@@ -33,11 +33,12 @@ clean-targets:
   - "dbt_packages"
 
 # Configure models
-models:
-  kit_flatten:
-      # Existing configurations...
-    database: "nithin"  # Replace with your target database name
-    schema: "nivea"   # Replace with your target schema name
+model-paths:
+  - |
+    {%- if target.name == "dev" -%} 
+      models/testing  # Indentation increased by one level
+    {%- endif -%}
+  - "models"
 
 packages:
   - package: dbt-labs/dbt_utils

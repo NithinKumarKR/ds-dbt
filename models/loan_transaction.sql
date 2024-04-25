@@ -1,9 +1,6 @@
 
-{{ config(
-    materialization='table',
-    schema='nivea',  -- Specify the desired schema
-    alias='loan_transaction'  -- Specify the desired table name
-) }}
+{{ config(materialized='table') }}
+
 
 
 WITH transformed_data AS (

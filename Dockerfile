@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream
 FROM m2pfintech01/airbyte:dbt-1.4
 ADD /dbt_project.yml /usr/app
-=======
+
 # Use the official Python 3.10 slim image as a base
 FROM python:3.10-slim
 

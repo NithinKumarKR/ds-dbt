@@ -10,15 +10,12 @@ profile: 'dbt_for_postgres'
 
 # These configurations specify where dbt should look for different types of files.
 model-paths:
-<<<<<<< Updated upstream
-  - |
-    {%- if target.name == "dev" -%} 
-    models/sbic_models
-    {%- endif -%}
-=======
   - "models"
-  
->>>>>>> Stashed changes
+  - |
+    {% if target.name == 'dev' %}
+    models/testing
+    {% endif %}
+
 
 analysis-paths: ["analyses"]
 test-paths: ["tests"]

@@ -6,5 +6,5 @@ sources:
     schema: nivea
 
     tables:
-      - name: kit_flat
+      - name: loan_transaction.sql
 

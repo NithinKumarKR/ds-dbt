@@ -9,7 +9,7 @@ dbt_for_postgres:
       pass: NEW_PASSWORD #"{{ env_var('postgres_password')}}"
       dbname: cello # "{{ env_var('postgres_dbname')}}"
       schema: nivea #"{{ env_var('postgres_schema')}}"
-      port:  #"{{ env_var('postgres_port' ) | int }}"
+      port:  5432 #"{{ env_var('postgres_port' ) | int }}"
 
     prod:
      type: postgres

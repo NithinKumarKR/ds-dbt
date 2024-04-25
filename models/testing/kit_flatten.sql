@@ -33,6 +33,6 @@ SELECT
         {% if not loop.last %},{% endif %}
     {% endfor %}
     ,        "_airbyte_ab_id",
-        "_airbyte_emitted_at",
+        "_airbyte_emitted_at"
 
 FROM transformed_data

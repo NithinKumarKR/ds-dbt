@@ -6,5 +6,7 @@ sources:
     schema: nivea
 
     tables:
-      - name: loan_flat.sql
+      - name: kit_flatten
+      - name: loan_flatten
+      - name: loan_transaction
 

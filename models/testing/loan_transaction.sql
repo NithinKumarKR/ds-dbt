@@ -31,6 +31,7 @@ transformed_data1 AS (
 )
 -- Extract desired fields from the transaction array element
 SELECT
+   transaction ->> 'mcc' AS mcc,
     transaction ->> 'amount' AS amount,
     transaction ->> 'txnType' AS txnType,
     transaction ->> 'extTxnId' AS extTxnId,
@@ -44,4 +45,4 @@ SELECT
     transformed_data1._airbyte_emitted_at
 FROM
     transformed_data1
-    group by 1,2,3,4,5,6,7,8,9,10,11
+    group by 1,2,3,4,5,6,7,8,9,10,11,12

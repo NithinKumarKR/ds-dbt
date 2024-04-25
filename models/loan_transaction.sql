@@ -1,3 +1,11 @@
+
+{{ config(
+    materialization='table',
+    schema='nivea',  -- Specify the desired schema
+    alias='loan_transaction'  -- Specify the desired table name
+) }}
+
+
 WITH transformed_data AS (
     -- Select data from cello.nivea.loan
     SELECT
@@ -46,3 +54,4 @@ SELECT
 FROM
     transformed_data1
     group by 1,2,3,4,5,6,7,8,9,10,11,12
+

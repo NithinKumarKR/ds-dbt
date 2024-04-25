@@ -10,12 +10,7 @@ profile: 'dbt_for_postgres'
 
 # These configurations specify where dbt should look for different types of files.
 
-model-paths:
-  - |
-    {%- if target.name == "dev" -%} 
-      models/testing  # Indentation increased by one level
-    {%- endif -%}
-  - "models"
+
 
 
 analysis-paths: ["analyses"]
@@ -33,12 +28,7 @@ clean-targets:
   - "dbt_packages"
 
 # Configure models
-model-paths:
-  - |
-    {%- if target.name == "dev" -%} 
-      models/testing  # Indentation increased by one level
-    {%- endif -%}
-  - "models"
+model-paths: ["models"]
 
 packages:
   - package: dbt-labs/dbt_utils

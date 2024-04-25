@@ -5,8 +5,4 @@ sources:
     database: cello
     schema: nivea
 
-    tables:
-      - name: kit_flatten
-      - name: loan_flatten
-      - name: loan_transaction
 

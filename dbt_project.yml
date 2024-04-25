@@ -9,12 +9,13 @@ config-version: 2
 profile: 'dbt_for_postgres'
 
 # These configurations specify where dbt should look for different types of files.
+
 model-paths:
-  - "models"
   - |
-    {% if target.name == 'dev' %}
-    models/testing
-    {% endif %}
+    {%- if target.name == "dev" -%} 
+      models/testing  # Indentation increased by one level
+    {%- endif -%}
+  - "models"
 
 
 analysis-paths: ["analyses"]
@@ -31,7 +32,16 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+# Configure models
+models:
+  sbic_models:  # Assuming your model group is named "sbic_models"
+    # Remove unused configurations (if applicable)
+    # example:  # Remove this line if not used
 
+    enc_aadhar_information:
+      # Existing configurations...
+      database: "nithin"  # Replace with your target database name
+      schema: "nivea"   # Replace with your target schema name
 
 packages:
   - package: dbt-labs/dbt_utils

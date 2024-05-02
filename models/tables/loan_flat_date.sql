@@ -53,5 +53,6 @@ SELECT
       now() as dbt_date
 
 FROM "cello"."airbyte_internal"."loan_flat_date"
+WHERE _airbyte_emitted_at=curdate_date
 
 

@@ -25,7 +25,7 @@ dbt_for_postgres:
       host: localhost #"{{ env_var('postgres_host')}}"
       user: postgres #"{{ env_var('postgres_user')}}"
       pass: NEW_PASSWORD #"{{ env_var('postgres_password')}}"
-      dbname: testing #"{{ env_var('postgres_dbname')}}"
+      dbname: plus #"{{ env_var('postgres_dbname')}}"
       schema: nivea #"{{ env_var('postgres_schema')}}"
       port: 5432 #"{{ env_var('postgres_port' ) | int }}"
-  target: prod
+  target: dev

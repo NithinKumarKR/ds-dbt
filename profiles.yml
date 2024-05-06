@@ -7,8 +7,8 @@ dbt_for_postgres:
       host: localhost #"{{ env_var('postgres_host')}}"
       user: postgres # "{{ env_var('postgres_user')}}"
       pass:   NEW_PASSWORD #"{{ env_var('postgres_password')}}"
-      dbname: cello #"{{ env_var('postgres_dbname')}}"
-      schema: airbyte_internal #"{{ env_var('postgres_schema')}}"
+      dbname: garnier #"{{ env_var('postgres_dbname')}}"
+      schema: acno #"{{ env_var('postgres_schema')}}"
       port: 5432 # "{{ env_var('postgres_port' ) | int }}"
 
     prod:
@@ -25,7 +25,7 @@ dbt_for_postgres:
       host: localhost #"{{ env_var('postgres_host')}}"
       user: postgres #"{{ env_var('postgres_user')}}"
       pass: NEW_PASSWORD #"{{ env_var('postgres_password')}}"
-      dbname: cello #"{{ env_var('postgres_dbname')}}"
-      schema: airbyte_internal #"{{ env_var('postgres_schema')}}"
+      dbname: garnier #"{{ env_var('postgres_dbname')}}"
+      schema: acno #"{{ env_var('postgres_schema')}}"
       port: 5432 #"{{ env_var('postgres_port' ) | int }}"
   target: dev

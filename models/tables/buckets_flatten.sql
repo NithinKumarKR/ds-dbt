@@ -10,7 +10,7 @@
 -- Fetch unique keys
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(_airbyte_data as jsonb))
-    FROM "garnier"."acno"."buckets"
+    FROM "plus"."airbyte_internal"."buckets"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -53,6 +53,6 @@ SELECT
     cast(_airbyte_data as jsonb),
     now() as dbt_date 
 
-FROM "garnier"."acno"."buckets"
+FROM "plus"."airbyte_internal"."buckets"
 
 

@@ -2,7 +2,7 @@
 {{ config(
         materialized='table',
         table='loan_transaction',
-        scheme='acno',
+        scheme='airbyte_internal',
     on_schema_change='append_new_columns',
     merge_update='update',
 ) }}
@@ -12,7 +12,7 @@
     SELECT  
     DISTINCT jsonb_object_keys(
 jsonb_array_elements(jsonb_extract_path(_airbyte_data::jsonb, 'transactionDetails')))
-    FROM "garnier"."acno"."loan_flat_date"
+    FROM "plus"."airbyte_internal"."loan_flat_date"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -56,7 +56,7 @@ cast(jsonb_extract_path(
     {% endfor %}
       now() as dbt_date
 
-FROM "garnier"."acno"."loan_flat_date"
+FROM "plus"."airbyte_internal"."loan_flat_date"
 group by 
     {% for i in range(unique_keys | length) %}
         jsonb_array_elements(

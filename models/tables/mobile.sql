@@ -63,8 +63,4 @@ SELECT
     cast(_airbyte_data as jsonb),
     now() as dbt_date 
 
-
-
 FROM "garnier"."acno"."acno_raw__stream_mobile"
-
-

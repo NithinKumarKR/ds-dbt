@@ -1,14 +1,15 @@
 {{ config(
-        materialized='table',
+    materialized='table',
     unique_key='_id',
     on_schema_change='append_new_columns',
     merge_update='update',
+
 ) }}
 
 -- Fetch unique keys
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(_airbyte_data as jsonb))
-    FROM "garnier"."acno"."nivea_raw__stream_cello_collection"
+    FROM "garnier"."acno"."acno_raw__stream_cello_collection"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -45,7 +46,7 @@
 
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(cast(_airbyte_data as jsonb)->>'person' as jsonb))
-    FROM "garnier"."acno"."nivea_raw__stream_cello_collection"
+    FROM "garnier"."acno"."acno_raw__stream_cello_collection"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -82,7 +83,7 @@
 
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(cast(cast(_airbyte_data as jsonb)->>'person' as jsonb)->>'address' as jsonb))
-    FROM "garnier"."acno"."nivea_raw__stream_cello_collection"
+    FROM "garnier"."acno"."acno_raw__stream_cello_collection"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -115,7 +116,7 @@
 
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(cast(cast(_airbyte_data as jsonb)->>'person' as jsonb)->>'dates' as jsonb))
-    FROM "garnier"."acno"."nivea_raw__stream_cello_collection"
+    FROM "garnier"."acno"."acno_raw__stream_cello_collection"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -173,6 +174,6 @@ SELECT
     cast(_airbyte_data as jsonb),
     now() as dbt_date 
 
-FROM "garnier"."acno"."nivea_raw__stream_cello_collection"
+FROM "garnier"."acno"."acno_raw__stream_cello_collection"
 
 

@@ -8,7 +8,7 @@
 -- Fetch unique keys
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(_airbyte_data as jsonb))
-    FROM "cello"."airbyte_internal"."loan_flat_date"
+    FROM "garnier"."acno"."loan_flat_date"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -52,6 +52,6 @@ SELECT
     TO_TIMESTAMP(SUBSTRING(cast(_airbyte_emitted_at as varchar), 1, 23), 'YYYY-MM-DD HH24:MI:SS.US') as _airbyte_emitted_at,
       now() as dbt_date
 
-FROM "cello"."airbyte_internal"."loan_flat_date"
+FROM "garnier"."acno"."loan_flat_date"
 
 

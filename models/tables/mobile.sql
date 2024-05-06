@@ -8,7 +8,7 @@
 -- Fetch unique keys
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(_airbyte_data as jsonb))
-    FROM "cello"."airbyte_internal"."nivea_raw__stream_mobile"
+    FROM "garnier"."acno"."nivea_raw__stream_mobile"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -65,6 +65,6 @@ SELECT
 
 
 
-FROM "cello"."airbyte_internal"."nivea_raw__stream_mobile"
+FROM "garnier"."acno"."nivea_raw__stream_mobile"
 
 

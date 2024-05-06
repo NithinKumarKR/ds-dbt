@@ -1,14 +1,16 @@
 {{ config(
         materialized='table',
-    unique_key='_id',
+    unique_key='pkey',
     on_schema_change='append_new_columns',
     merge_update='update',
+     incremental_stategy = 'merge'
+
 ) }}
 
 -- Fetch unique keys
 {% set query %}
     SELECT DISTINCT jsonb_object_keys(cast(_airbyte_data as jsonb))
-    FROM "cello"."airbyte_internal"."nivea_raw__stream_mobile"
+    FROM "cello"."airbyte_internal"."buckets"
 {% endset %}
 
 {% set all_keys = run_query(query) %}
@@ -31,8 +33,6 @@
         {%- do lower_unique_keys.append(key_new) -%}
     {% endif %}
 {% endfor %}
-{%- do unique_keys.remove('_id') -%}
-{%- do unique_keys.insert(0, '_id') -%}
 {{ print('table_keys') }}
 {{ print(unique_keys) }}
 {% endif %}
@@ -42,29 +42,17 @@
 -- Inserting new records
 
 SELECT
+
+
+
     {% for i in range(unique_keys | length) %}
         cast(_airbyte_data as jsonb)->>'{{unique_keys[i]}}' as {{unique_keys[i]}},
     {% endfor %}
-    
-    replace(
-        SPLIT_PART(cast(_airbyte_data as jsonb)->>'RGB', ',', 1),
-        'rgb(','') 
-         as x
-        ,
-        SPLIT_PART(cast(_airbyte_data as jsonb)->>'RGB', ',', 2)
-         as y
-        ,replace(
-        SPLIT_PART(cast(_airbyte_data as jsonb)->>'RGB', ',', 3)
-        ,')','')
-                 as z
 
-        ,
-    _airbyte_raw_id,
+    _airbyte_ab_id,
     cast(_airbyte_data as jsonb),
     now() as dbt_date 
 
-
-
-FROM "cello"."airbyte_internal"."nivea_raw__stream_mobile"
+FROM "cello"."airbyte_internal"."buckets"
 
 

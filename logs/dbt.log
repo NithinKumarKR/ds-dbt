@@ -1,0 +1,263 @@
+[0m06:10:29.471866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557ede4c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557d08e890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557d08dab0>]}
+
+
+============================== 06:10:29.481366 | 547cfa3b-104b-473b-a7aa-c92718a2398b ==============================
+[0m06:10:29.481366 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:10:29.482403 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/ds-dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/workspaces/ds-dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:10:29.542414 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Credentials in profile "dbt_for_postgres", target "dev" invalid: None is not of type 'string'
+[0m06:10:29.543991 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.13640395, "process_user_time": 2.490772, "process_kernel_time": 0.107601, "process_mem_max_rss": "91896", "process_in_blocks": "3368", "process_out_blocks": "16", "command_success": false}
+[0m06:10:29.545100 [debug] [MainThread]: Command `dbt run` failed at 06:10:29.544707 after 0.14 seconds
+[0m06:10:29.545987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557ede4c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557cab4f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70557cada6b0>]}
+[0m06:10:29.546722 [debug] [MainThread]: Flushing usage events
+[0m06:11:47.034684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3ad3fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3b5aedd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c391bbee0>]}
+
+
+============================== 06:11:47.037841 | ea1c16a3-e2e5-4f04-a224-49eeda112a00 ==============================
+[0m06:11:47.037841 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:11:47.039033 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/ds-dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/workspaces/ds-dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:11:47.380374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3b5aedd0>]}
+[0m06:11:47.493569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c391bf9d0>]}
+[0m06:11:47.494705 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m06:11:47.503684 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:11:47.504684 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m06:11:47.505433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c387447c0>]}
+[0m06:11:48.554728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3773feb0>]}
+[0m06:11:48.564478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3773eda0>]}
+[0m06:11:48.565273 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 407 macros, 0 groups, 0 semantic models
+[0m06:11:48.566012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea1c16a3-e2e5-4f04-a224-49eeda112a00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c38747a60>]}
+[0m06:11:48.567925 [info ] [MainThread]: 
+[0m06:11:48.569022 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:11:48.570645 [debug] [ThreadPool]: Acquiring new postgres connection 'list_indusind_reports'
+[0m06:11:48.577314 [debug] [ThreadPool]: Using postgres connection "list_indusind_reports"
+[0m06:11:48.578005 [debug] [ThreadPool]: On list_indusind_reports: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:11:48.578649 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:11:58.589833 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "172.28.7.11", port 5665 failed: timeout expired
+
+[0m06:12:08.593341 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:12:08.594271 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:12:08.594993 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m06:12:08.595640 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:12:08.596292 [debug] [ThreadPool]: On list_indusind_reports: No close available on handle
+[0m06:12:08.597860 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:12:08.598895 [debug] [MainThread]: Connection 'list_indusind_reports' was properly closed.
+[0m06:12:08.599568 [info ] [MainThread]: 
+[0m06:12:08.600491 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 20.03 seconds (20.03s).
+[0m06:12:08.601480 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "172.28.7.11", port 5665 failed: timeout expired
+  
+[0m06:12:08.602714 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 21.6215, "process_user_time": 3.717779, "process_kernel_time": 0.11618, "process_mem_max_rss": "104616", "process_in_blocks": "640", "process_out_blocks": "1560", "command_success": false}
+[0m06:12:08.603593 [debug] [MainThread]: Command `dbt run` failed at 06:12:08.603358 after 21.62 seconds
+[0m06:12:08.604283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c3ad3fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c387f9e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x799c37745210>]}
+[0m06:12:08.605148 [debug] [MainThread]: Flushing usage events
+[0m06:12:46.853793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e19a20c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e1a05a890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e1a05b7f0>]}
+
+
+============================== 06:12:46.856925 | a40e9f0e-e357-4815-ae89-3bd92b210023 ==============================
+[0m06:12:46.856925 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:12:46.857863 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/ds-dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/workspaces/ds-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:12:47.077373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a40e9f0e-e357-4815-ae89-3bd92b210023', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e186bddb0>]}
+[0m06:12:47.186888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a40e9f0e-e357-4815-ae89-3bd92b210023', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e17cb4c70>]}
+[0m06:12:47.188087 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m06:12:47.197443 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:12:47.230332 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:12:47.231447 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:12:47.237943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a40e9f0e-e357-4815-ae89-3bd92b210023', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e16b85de0>]}
+[0m06:12:47.247948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a40e9f0e-e357-4815-ae89-3bd92b210023', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e16b43220>]}
+[0m06:12:47.249188 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 407 macros, 0 groups, 0 semantic models
+[0m06:12:47.250161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a40e9f0e-e357-4815-ae89-3bd92b210023', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e16b58940>]}
+[0m06:12:47.252250 [info ] [MainThread]: 
+[0m06:12:47.253384 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:12:47.255063 [debug] [ThreadPool]: Acquiring new postgres connection 'list_indusind_reports'
+[0m06:12:47.268867 [debug] [ThreadPool]: Using postgres connection "list_indusind_reports"
+[0m06:12:47.269580 [debug] [ThreadPool]: On list_indusind_reports: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:12:47.270238 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:12:57.281451 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "172.28.7.11", port 5665 failed: timeout expired
+
+[0m06:13:07.293058 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:13:07.294006 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:13:07.294752 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m06:13:07.295416 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:13:07.296087 [debug] [ThreadPool]: On list_indusind_reports: No close available on handle
+[0m06:13:07.297609 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:13:07.298267 [debug] [MainThread]: Connection 'list_indusind_reports' was properly closed.
+[0m06:13:07.298933 [info ] [MainThread]: 
+[0m06:13:07.299711 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 20.05 seconds (20.05s).
+[0m06:13:07.300588 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "172.28.7.11", port 5665 failed: timeout expired
+  
+[0m06:13:07.301892 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 20.502262, "process_user_time": 2.842617, "process_kernel_time": 0.107445, "process_mem_max_rss": "101764", "process_out_blocks": "792", "command_success": false, "process_in_blocks": "0"}
+[0m06:13:07.302788 [debug] [MainThread]: Command `dbt run` failed at 06:13:07.302549 after 20.50 seconds
+[0m06:13:07.303492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e19a20c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e16b43eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x704e16bc7580>]}
+[0m06:13:07.304325 [debug] [MainThread]: Flushing usage events
+[0m06:21:22.416033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4e3b8f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4ea72da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4e9f3ee0>]}
+
+
+============================== 06:21:22.419338 | 787c807d-3c5e-4a08-8e36-23e8b0329e7a ==============================
+[0m06:21:22.419338 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:21:22.420276 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/workspaces/ds-dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/workspaces/ds-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:21:22.621493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '787c807d-3c5e-4a08-8e36-23e8b0329e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4ea72da0>]}
+[0m06:21:22.732415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '787c807d-3c5e-4a08-8e36-23e8b0329e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4e99fd60>]}
+[0m06:21:22.733748 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m06:21:22.743360 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:21:22.771975 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:21:22.772884 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:21:22.779799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '787c807d-3c5e-4a08-8e36-23e8b0329e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4b789e10>]}
+[0m06:21:22.790781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '787c807d-3c5e-4a08-8e36-23e8b0329e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4b75c070>]}
+[0m06:21:22.791590 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 407 macros, 0 groups, 0 semantic models
+[0m06:21:22.792377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '787c807d-3c5e-4a08-8e36-23e8b0329e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4b75ca00>]}
+[0m06:21:22.794426 [info ] [MainThread]: 
+[0m06:21:22.795580 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:21:22.797404 [debug] [ThreadPool]: Acquiring new postgres connection 'list_indusind_reports'
+[0m06:21:22.810332 [debug] [ThreadPool]: Using postgres connection "list_indusind_reports"
+[0m06:21:22.811166 [debug] [ThreadPool]: On list_indusind_reports: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:21:22.811837 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:21:32.823125 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "172.28.7.11", port 5665 failed: timeout expired
+
+[0m06:21:42.831591 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:21:42.832595 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:21:42.833414 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m06:21:42.834063 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:21:42.834754 [debug] [ThreadPool]: On list_indusind_reports: No close available on handle
+[0m06:21:42.836251 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:21:42.836926 [debug] [MainThread]: Connection 'list_indusind_reports' was properly closed.
+[0m06:21:42.837580 [info ] [MainThread]: 
+[0m06:21:42.838350 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 20.04 seconds (20.04s).
+[0m06:21:42.839210 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "172.28.7.11", port 5665 failed: timeout expired
+  
+[0m06:21:42.840498 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 20.479511, "process_user_time": 2.763449, "process_kernel_time": 0.087982, "process_mem_max_rss": "101752", "process_out_blocks": "800", "command_success": false, "process_in_blocks": "0"}
+[0m06:21:42.841414 [debug] [MainThread]: Command `dbt run` failed at 06:21:42.841180 after 20.48 seconds
+[0m06:21:42.842104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4e3b8f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4b743eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ac4b7d35b0>]}
+[0m06:21:42.842878 [debug] [MainThread]: Flushing usage events
+[0m06:33:52.260435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c958bccf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c959286da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c959207ee0>]}
+
+
+============================== 06:33:52.263585 | 56dd0729-4c31-4303-a2d7-23280fef0d5c ==============================
+[0m06:33:52.263585 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:33:52.264508 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/workspaces/ds-dbt/logs', 'version_check': 'True', 'profiles_dir': '/workspaces/ds-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:33:52.465961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '56dd0729-4c31-4303-a2d7-23280fef0d5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c959286da0>]}
+[0m06:33:52.582497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '56dd0729-4c31-4303-a2d7-23280fef0d5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c9591b3d60>]}
+[0m06:33:52.583671 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m06:33:52.593206 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:33:52.620355 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:33:52.621119 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:33:52.627671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '56dd0729-4c31-4303-a2d7-23280fef0d5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c955d85e10>]}
+[0m06:33:52.637705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '56dd0729-4c31-4303-a2d7-23280fef0d5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c955d58070>]}
+[0m06:33:52.638467 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 407 macros, 0 groups, 0 semantic models
+[0m06:33:52.639266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '56dd0729-4c31-4303-a2d7-23280fef0d5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c955d58a00>]}
+[0m06:33:52.641257 [info ] [MainThread]: 
+[0m06:33:52.642374 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:33:52.644027 [debug] [ThreadPool]: Acquiring new postgres connection 'list_indusind_reports'
+[0m06:33:52.656589 [debug] [ThreadPool]: Using postgres connection "list_indusind_reports"
+[0m06:33:52.658672 [debug] [ThreadPool]: On list_indusind_reports: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:33:52.659355 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:34:02.669082 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "172.28.7.11", port 5665 failed: timeout expired
+
+[0m06:34:12.680424 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:34:12.681408 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:34:12.682133 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m06:34:12.683094 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:34:12.684242 [debug] [ThreadPool]: On list_indusind_reports: No close available on handle
+[0m06:34:12.686610 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:34:12.687663 [debug] [MainThread]: Connection 'list_indusind_reports' was properly closed.
+[0m06:34:12.688816 [info ] [MainThread]: 
+[0m06:34:12.690146 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 20.05 seconds (20.05s).
+[0m06:34:12.691675 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "172.28.7.11", port 5665 failed: timeout expired
+  
+[0m06:34:12.693931 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 20.4877, "process_user_time": 2.812132, "process_kernel_time": 0.111656, "process_mem_max_rss": "101988", "process_out_blocks": "800", "command_success": false, "process_in_blocks": "0"}
+[0m06:34:12.695832 [debug] [MainThread]: Command `dbt run` failed at 06:34:12.695509 after 20.49 seconds
+[0m06:34:12.696929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c958bccf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c955d43eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78c955dd35b0>]}
+[0m06:34:12.697694 [debug] [MainThread]: Flushing usage events
+[0m06:34:33.930729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3cd33460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3d36a410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3d36bfd0>]}
+
+
+============================== 06:34:33.935846 | f20c6545-4949-4382-9e1c-26cff68f9d4d ==============================
+[0m06:34:33.935846 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:34:33.937451 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/ds-dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/ds-dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:34:34.158908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f20c6545-4949-4382-9e1c-26cff68f9d4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3b9cdd80>]}
+[0m06:34:34.267723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f20c6545-4949-4382-9e1c-26cff68f9d4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3afc8610>]}
+[0m06:34:34.268836 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m06:34:34.277921 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:34:34.305030 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:34:34.305709 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:34:34.312392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f20c6545-4949-4382-9e1c-26cff68f9d4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d39d85db0>]}
+[0m06:34:34.322232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f20c6545-4949-4382-9e1c-26cff68f9d4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d39d431f0>]}
+[0m06:34:34.322993 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 407 macros, 0 groups, 0 semantic models
+[0m06:34:34.323745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f20c6545-4949-4382-9e1c-26cff68f9d4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d39d589d0>]}
+[0m06:34:34.325741 [info ] [MainThread]: 
+[0m06:34:34.326844 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:34:34.328513 [debug] [ThreadPool]: Acquiring new postgres connection 'list_indusind_reports'
+[0m06:34:34.342171 [debug] [ThreadPool]: Using postgres connection "list_indusind_reports"
+[0m06:34:34.342882 [debug] [ThreadPool]: On list_indusind_reports: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:34:34.343531 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:34:44.354691 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "172.28.7.11", port 5665 failed: timeout expired
+
+[0m06:34:54.366269 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "dbt_for_postgres", "target_name": "dev", "connection_name": "list_indusind_reports"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:34:54.367208 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:34:54.367939 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m06:34:54.368581 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m06:34:54.369282 [debug] [ThreadPool]: On list_indusind_reports: No close available on handle
+[0m06:34:54.370794 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:34:54.371446 [debug] [MainThread]: Connection 'list_indusind_reports' was properly closed.
+[0m06:34:54.372099 [info ] [MainThread]: 
+[0m06:34:54.372895 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 20.05 seconds (20.05s).
+[0m06:34:54.373840 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "172.28.7.11", port 5665 failed: timeout expired
+  
+[0m06:34:54.375090 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 20.52962, "process_user_time": 2.752597, "process_kernel_time": 0.127656, "process_mem_max_rss": "101812", "process_out_blocks": "800", "command_success": false, "process_in_blocks": "0"}
+[0m06:34:54.375975 [debug] [MainThread]: Command `dbt run` failed at 06:34:54.375740 after 20.53 seconds
+[0m06:34:54.376699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d3cd33460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d39d43e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711d39dd3550>]}
+[0m06:34:54.377543 [debug] [MainThread]: Flushing usage events

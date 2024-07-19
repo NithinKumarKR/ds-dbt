@@ -7,7 +7,7 @@
 -- Fetch unique keys from the last 3 months
 
 SELECT * 
-FROM "borosil"."dw"."dw_core_accounts"
+FROM "borosil"."dw"."dw_core_entity"
 WHERE date(last_modified_date) >= date(CURRENT_DATE - interval '3 months')
 and  TO_TIMESTAMP(SUBSTRING(cast(_airbyte_extracted_at as varchar), 1,23),'YYYY-MM-DD HH24:MI:SS.MS') > 
         COALESCE((select max(TO_TIMESTAMP(SUBSTRING(cast(_airbyte_extracted_at as varchar), 1,23),'YYYY-MM-DD HH24:MI:SS.MS'))

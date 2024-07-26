@@ -31,7 +31,7 @@ clean-targets:
 models:
   dbt_for_postgres:
     staging:
-      +schema: dw
+      +schema: archieve
       +materialized: table
 
 packages:

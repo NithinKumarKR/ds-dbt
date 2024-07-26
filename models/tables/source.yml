@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: mac
+    schema: archieve
+
+    tables:
+      - name: dw_core_accounts
+      - name: dw_core_entity
+      - name: dw_core_intermediate_transactions
+

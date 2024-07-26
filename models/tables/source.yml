@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: airbyte_raw
     database: mac
-    schema: dw
+    schema: archieve
 
     tables:
       - name: dw_core_accounts

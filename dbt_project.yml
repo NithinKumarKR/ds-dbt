@@ -13,7 +13,7 @@ profile: 'dbt_for_postgres'
 model-paths:
   - |
     {%- if target.name == "dev" -%} 
-      models/testing  # Indentation increased by one level
+      models/tables  # Indentation increased by one level
     {%- endif -%}
   - "models"
 

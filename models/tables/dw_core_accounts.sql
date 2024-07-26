@@ -1,5 +1,5 @@
 {{ config(
-    materialized='incremental',
+    materialized='decremental',
     unique_key = 'pkey',
     incremental_stategy = 'merge',
     on_schema_change= 'append_new_columns'
